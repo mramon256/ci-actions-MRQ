@@ -1,0 +1,14 @@
+name: Hola Actions MRQ 
+
+#Cuando se dispara el evento que ejecuta el workflow
+on:
+  push:
+    branches:
+      - main
+      #executar manualment des de la pestanya Actions (esdeveniment workflow_dispatch).
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: debian-latest
+    steps:
+      - run: echo "Hola, GitHub Actions! Sóc MRQ"
