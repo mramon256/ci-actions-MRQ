@@ -24,7 +24,7 @@ class CalculadoraTest extends TestCase
 
     public function testDivideix(): void
     {
-        $this->assertEqualsWithDelta(2.5, Sthis->calc->divideix(5, 2), 0.001);
+        $this->assertEqualsWithDelta(2.5, $this->calc->divideix(5, 2), 0.001);
     }
 
     public function testDivideixPerZero(): void
