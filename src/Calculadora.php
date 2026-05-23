@@ -14,7 +14,7 @@ class Calculadora
     
     public function divideix(float $a, float $b): float
     {
-        if ($b=0.0) {
+        if ($b==0.0) {
             throw new \DivisionByZeroError('No es pot dividir per zero');
         }
         return $a/$b;
