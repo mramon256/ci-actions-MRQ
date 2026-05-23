@@ -16,5 +16,5 @@ jobs:
         with:
           php-version: 'PHP 8.2'
       - run: composer install
-      - run: ./vendor/bin/phpunit
+      - run: ./vendor/bin/phpuniT
       
