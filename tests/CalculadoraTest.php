@@ -7,9 +7,9 @@ class CalculadoraTest extends TestCase
 {
     private Calculadora $calc;
     
-    protected function setUp(): void
+    public function setUp(): void
     {
-        $this->calc = new Calculadora);
+        $this->calc = new Calculadora();
     }
 
     public function testSuma(): void
