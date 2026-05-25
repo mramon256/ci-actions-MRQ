@@ -17,6 +17,11 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+        if: always()
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resultats-MRQ
+          path: resultats.xml
       - run: composer install
       - run: ./vendor/bin/phpunit --log-junit resultats.xml
       
