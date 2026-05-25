@@ -17,11 +17,11 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-        if: always()
+      - run: composer install
+      - run: ./vendor/bin/phpunit --log-junit resultats.xml
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: resultats-MRQ
           path: resultats.xml
-      - run: composer install
-      - run: ./vendor/bin/phpunit --log-junit resultats.xml
       
