@@ -18,5 +18,5 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
       - run: composer install
-      - run: ./vendor/bin/phpunit
+      - run: ./vendor/bin/phpunit --log-junit resultats.xml
       
